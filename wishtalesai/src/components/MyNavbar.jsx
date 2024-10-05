@@ -1,46 +1,7 @@
-// import { Navbar, Nav, Container } from "react-bootstrap";
-// import { useNavigate } from "react-router-dom";
-
-// const MyNavbar = () => {
-//   const navigate = useNavigate();
-//   const isLoggedIn = !!localStorage.getItem("token");
-
-//   const handleLogout = () => {
-//     localStorage.removeItem("token");
-//     navigate("/login");
-//   };
-
-//   return (
-//     <Navbar bg="dark" variant="dark" expand="lg" className="mb-4">
-//       <Container>
-//         <Navbar.Brand href="/">My App</Navbar.Brand>
-//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-//         <Navbar.Collapse id="basic-navbar-nav">
-//           <Nav className="me-auto">
-//             <Nav.Link href="/albums">Albums</Nav.Link>
-//             {!isLoggedIn ? (
-//               <>
-//                 <Nav.Link href="/login">Login</Nav.Link>
-//                 <Nav.Link href="/signup">Signup</Nav.Link>
-//               </>
-//             ) : (
-//               <Nav.Link onClick={handleLogout} style={{ cursor: "pointer" }}>
-//                 Logout
-//               </Nav.Link>
-//             )}
-//           </Nav>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// };
-
-// export default MyNavbar;
-
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react"; // Import necessary hooks
-import "bootstrap-icons/font/bootstrap-icons.css"; // Make sure Bootstrap icons are available
+import { useState, useEffect } from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const MyNavbar = () => {
   const navigate = useNavigate();
@@ -64,14 +25,7 @@ const MyNavbar = () => {
   };
 
   return (
-    <Navbar
-      // bg={theme === "light" ? "light" : "dark"}
-      bg={"dark"}
-      // variant={theme === "light" ? "light" : "dark"}
-      variant={"dark"}
-      expand="lg"
-      className="mb-4"
-    >
+    <Navbar bg={"dark"} variant={"dark"} expand="lg" className="mb-4">
       <Container>
         <Navbar.Brand href="/">My App</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
